@@ -4,6 +4,8 @@ const server = restify.createServer({
     version : '1.0.0'
 })
 
+global.config = require('./config/connection');
+
 server.get('/api/example' , (req, res) => {
     res.send(200, {
         data: {
@@ -13,6 +15,8 @@ server.get('/api/example' , (req, res) => {
         }
     })
 })
+
+require('./service/CategoryService')(server, global.config.pool);
 
 server.listen(3500, function(){
     console.log(server.name + ' is running .....')
