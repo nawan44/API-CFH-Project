@@ -1,0 +1,16 @@
+{
+  "name": "cfh_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nawan44",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.3.0",
+    "restify": "^8.5.1",
+    "restify-cors-middleware": "^1.1.1"
+  }
+}
