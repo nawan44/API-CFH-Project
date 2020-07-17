@@ -11,13 +11,14 @@ server.get('/api/example' , (req, res) => {
         data: {
             name: 'Rachmat',
             alamat: 'Bekasi',
-            umur:'29'
+            umur:'29',
+            email:'rachm@gmail.com'
         }
     })
 })
 
 require('./service/CategoryService')(server, global.config.pool);
 
-server.listen(3500, function(){
-    console.log(server.name + ' is running .....')
+server.listen(3500, function () {
+    console.log(server.name + ' is running........');
 })
